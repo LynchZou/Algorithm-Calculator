@@ -1,4 +1,4 @@
-## Obtaining A Relatively Optimal Solution to Travelling Salesperson by Genetic Algorithm
+## Optimal Solution to Travelling Salesperson by Genetic Algorithm
 
 <br>
 <br>
