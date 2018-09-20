@@ -1,6 +1,8 @@
-## Obtaining A Relatively Optimal Solution to 
-## Travelling Salesperson by Genetic Algorithm
+## Obtaining A Relatively Optimal Solution to Travelling Salesperson by Genetic Algorithm
 
+<br>
+<br>
+<br>
 **--Key Inspect--**
 - Use `Functional Programming` to implement
 - Use `Makefile` to compile
