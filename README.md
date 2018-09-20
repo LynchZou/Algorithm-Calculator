@@ -2,7 +2,8 @@
 
 <br>
 <br>
-<br>
+
+
 **--Key Inspect--**
 - Use `Functional Programming` to implement
 - Use `Makefile` to compile
