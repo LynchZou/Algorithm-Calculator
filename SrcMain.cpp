@@ -73,25 +73,18 @@ void ProcessCommandArgs(int argc, const char* argv[])
         outfile << mypair.first << ":" << mypair.second << std::endl;
     });
     
+    
     // select the optimal path and write to file
     auto solution = std::min_element(fitness.begin(), fitness.end(),
                                          [](const std::pair<int, double>& a, const std::pair<int, double>& b)
     {
         return a.second < b.second;
     });
-    bool endline = false;
-    std::for_each(populations.back()->mMembers[solution->first].begin(), populations.back()->mMembers[solution->first].end(), [&out, locations, &endline](const int& i){
-        if(!endline) {
-            out << locations[i]->mName << " --> ";
-            endline = true;
-        }
-        else {
-            out << locations[i]->mName << " --> " << std::endl;
-            endline = false;
-        }
+    std::for_each(populations.back()->mMembers[solution->first].begin(), populations.back()->mMembers[solution->first].end(), [&out, locations](const int& i){
+        out << locations[i]->mName << "\t\t\t\t --> Only for reference --> " << "latitude: " << locations[i]->mLatitude/0.0174533 << "," << "longitude: " << locations[i]->mLongitude/0.0174533 << std::endl;
     });
-    out << locations[0]->mName << std::endl;
-    out << "\nDISTANCE: " << solution->second <<  + " miles";
+    out << locations[0]->mName << "\t\t\t\t --> Only for reference --> " << "latitude: " << locations[0]->mLatitude/0.0174533 << "," << "longitude: " << locations[0]->mLongitude/0.0174533 << std::endl;
+    out << "DISTANCE: " << solution->second <<  + " miles";
     
     outfile.close();
     out.close();

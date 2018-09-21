@@ -1,5 +1,6 @@
 CXX = g++
 CPPFLAGS = -g -Wall -std=c++11
+BIN_DIR = bin
 
 all: Main
 
@@ -11,3 +12,12 @@ TSP.o: TSP.cpp TSP.h
 
 SrcMain.o: SrcMain.cpp SrcMain.h
 	$(CXX) $(CPPFLAGS) -c $< -o $@
+
+.PHONY: clean
+clean:
+	rm -rf $(BIN_DIR)
+	rm hw4
+
+$(BIN_DIR)/.dirstamp:
+	mkdir -p $(BIN_DIR)
+	touch $(BIN_DIR)/.dirstamp
