@@ -11,6 +11,7 @@
 #include <iomanip>
 
 
+
 // function for parsing the locations
 std::vector<Location*> parseLocations(const std::string& inputFile)
 {   
