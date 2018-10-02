@@ -25,6 +25,7 @@
 4. Test
     1. Test Environment
     2. Web Interface Test
+    3. Locations Test
 
 <br><br><br>
 
