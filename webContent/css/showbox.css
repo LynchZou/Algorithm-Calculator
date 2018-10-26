@@ -1,0 +1,81 @@
+/* profile format */
+#profileWord {
+    margin-left: 45%;
+}
+
+#profileWord.hovered {
+    animation: goLeft 4s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+#profileSpan {
+    display: inline-block;
+    height: 5px;
+    width: 0;
+    margin-left: 3%;
+    background: black;
+    float: left;
+}
+
+#profileSpan.hovered {
+    animation: expandLine 4s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+
+#about p {
+    margin-left: 7%;
+}
+
+#selfing-sv
+{
+    float: left;
+    width: 240px;
+    height: 320px;
+    margin: 40px;
+}
+
+#selfing-sv:hover
+{
+    transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: scale(1.2);
+}
+
+
+#selfing-hs {
+    float: left;
+    width: 230px;
+    height: 320px;
+    margin: 40px;
+}
+
+#selfing-hs:hover
+{
+    transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: scale(1.2);
+}
+
+#selfing-mtg {
+    float: left;
+    width: 220px;
+    height: 310px;
+    margin: 40px;
+}
+
+#selfing-mtg:hover
+{
+    transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: scale(1.2);
+}
+
+#website-icon {
+    margin-top: 60%;
+}
+
+#website-icon:hover {
+    cursor: pointer;
+}

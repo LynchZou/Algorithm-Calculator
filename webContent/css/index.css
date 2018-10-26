@@ -1,0 +1,75 @@
+/* Content */
+@font-face {
+	font-family: "Midnight";
+	src: url(../fonts/BiggerLove.ttf);
+}
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: #444;
+	background: url(../image/background_final.png) repeat;
+	background-size: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	font-family: Midnight;
+}
+
+#skip {
+	position: absolute;
+	top: 3%;
+	right: 10%;
+	text-decoration: none;
+	color: rgba(14, 13, 13, 0.589);
+	font-size: 30px;
+	font-family: Midnight;
+}
+
+
+/* poem and ask */
+#show,
+#ask{
+	text-align: center;
+	font-size: 30px;
+	color: rgba(14, 13, 13, 0.589);
+	position: absolute;
+	right: 40%;
+}
+
+#show {
+	top: 10%;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+}
+#ask {
+	top: 30%;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+}
+
+
+.transparent {
+	display: none;
+}
+
+.transparent2 {
+	display: none;
+	font-size: 100px;
+}
+
+/* hyperlink */
+#profile {
+	text-align: center;
+	font-size: 30px;
+	color: white;
+	display: none;
+}
