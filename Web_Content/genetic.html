@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="icon" href="image/paperplane.png">
+
+    <title>Lynch's Calculator</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="scss/stylesheets/styles.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href="css/grayscale.css">
+    <link rel="stylesheet" href="css/showbox.css">
+    <link rel="stylesheet" href="css/project.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="js/myApp.js"></script>
+    <script src="js/myControl.js"></script>
+
+    <script src="js/project.js"></script>
+    
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMfAPAt1wcTr8e_wPThreAXblcF_SU5Ms&callback=initMap">
+    </script>
+
+  </head>
+
+<body id="page-top" style="display: block;">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="http://lynchzou0114.com/profile.php">Lynch</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Algorithm Calculator
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#" style="background: lightcoral;">Genetic Algorithm</a>
+                        <a class="dropdown-item" href="#">Breath-First Search</a>
+                        <a class="dropdown-item" href="#">Depth-First Search</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://lynchzou0114.com/profile.php">Home <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+        </nav>
+
+    <!-- Project Section -->
+    <div id="ga">
+        <h2 style="text-align: center; margin-top: 5%;">Genetic Algorithm Calculator</h2>
+        <div id="floating-panel">
+            <i class="fa fa-search" aria-hidden="true" id="search-icon"></i>
+            <input id="address" type="text" placeholder="eg. Los Angeles">
+        </div>
+        <div id="instruction">click marker to add that location</div>
+        <div id="map"></div><br>
+        <br><br><br><br><br><br><br>
+
+        <table class="table" id="mytable">
+            <tbody>
+                <tr>
+                    <td>Location</td>
+                    <td>Latitude</td>
+                    <td>Longitude</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button id="buttonSubmit" type="button" class="btn btn-primary btn-sm" onclick="submit()">Download your path</button>
+
+        <div id="intro">
+            <ul>
+                <li> Now you have a file named &nbsp;&nbsp;&nbsp;<span class="bolden">locations.txt</span> &nbsp;&nbsp;&nbsp;containing all the latitudes and longitudes</li>
+                <li> Go to &nbsp;&nbsp;&nbsp;<a href="https://github.com/LynchZou/Genetic-Algorithm.git" target="_blank">this website</a> &nbsp;&nbsp;&nbsp;to download the C++ files you need</li>
+                <li> Use &nbsp;<span class="bolden">Makefile</span> to compile (yes! everything's done for you!)</li>
+                <li> Run with &nbsp;<span class="bolden">./Main locations.txt</span>&nbsp; in Terminal</li>
+                <li> You will get a &nbsp;<span class="bolden">path.txt</span> containing the path, and a &nbsp;<span class="bolden">log.txt</span> &nbsp;containing the calculation process</li>
+                <li> Upload your &nbsp;<span class="bolden">path.txt</span> and then the route will show on the map!</li>
+            </ul>
+            <div id="upload">
+                <form id="uploadform" method="post" enctype="multipart/form-data">
+                    <label class="btn btn-block btn-info form-control">
+                        Browse&hellip; <input type="file" style="display: none;" name="fileToUpload" id="fileToUpload">
+                    </label>
+                    <input type="submit" value="Upload" name="submit" class="btn btn-light btn-sm form-control">
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="small text-center text-black">
+        Copyright &copy; Lynch Zou 2018 | Contact: +1 (213)713-7527
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="vendor/waypoint/lib/jquery.waypoints.min.js"></script>
+
+  </body>
+
+</html>
