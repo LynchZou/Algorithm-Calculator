@@ -1,1 +1,0 @@
-var contact = angular.module('myApp', []);
