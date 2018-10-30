@@ -1,6 +1,5 @@
-# Optimal Solution to Travelling Salesperson by Genetic Algorithm
-## Xuyang Zou (Lynch)
-
+# Algorithm Calculator
+## Solves several different problems like Travelling Salesperson
 <br><br><br>
 
 
