@@ -1,5 +1,5 @@
 # Algorithm Calculator
-## Solves several different problems like Travelling Salesperson
+## A calculator for different problems like Traverlling Salesperson and graph traversal
 <br><br><br>
 
 
